@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Exam Schedule</title>
+</head>
+
+<body>
+    <h1>Exam Schedule</h1>
+    <div class="add-exam">
+        <h3>Add New Exam</h3>
+        <form id="examForm">
+            <input type="text" name="course_name" placeholder="Course Name" required>
+            <input type="number" name="exam_no" placeholder="Exam Number" required>
+            <input type="number" name="batch" placeholder="Batch (47-54)" min="47" max="54" required>
+            <input type="date" name="exam_date" required>
+            <input type="time" name="start_time" required>
+            <input type="number" name="duration_minutes" placeholder="Duration (minutes)" required>
+            <button type="submit">Add Exam</button>
+        </form>
+    </div>
+    
+    <div class="exam-filters">
+    <button id="ongoingBtn" class="filter-btn active">Ongoing Exams</button>
+    <button id="upcomingBtn" class="filter-btn">Upcoming Exams</button>
+    </div>
+
+
+    <div id="examContainer"></div>
+
+    <script src="public/app.js"></script>
+</body>
+
+</html>
